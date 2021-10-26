@@ -1,6 +1,14 @@
 from torch.utils.data import Dataset
 import os
 import glob
+from matplotlib import image
+import pandas as pd
+
+num_labels = 11
+
+mean = (0.6432, 0.5252, 0.4514)
+std = (0.1559, 0.1856, 0.1889)
+
 labels_to_num = {'contact allergy': 0, \ 
         'bland': 1, \
         'pyoderma': 2, \
